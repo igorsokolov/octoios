@@ -1,7 +1,7 @@
 octoios
 =======
 
-Scripts for automatic build, deploy and launch iOS apps on connected Apple devices.
+Scripts for automatic build, deploy and launch iOS apps on the connected Apple devices.
 
 # About
 
@@ -37,11 +37,13 @@ The following 3rd party open source libraries have been used:
 
 
 - Fruitstrap (authored by ghughes, mantained by jgranick, minor fix by igorsokolov) [Fruitstrap](https://github.com/igorsokolov/fruitstrap)
-- Transported Chief (authored by [Holger Weissböck](http://gamua.com/blog/2012/03/how-to-deploy-ios-apps-to-the-iphone-via-the-command-line/)) [Transporter chief](https://gist.github.com/3096433)
+- Transporter Chief (authored by [Holger Weissböck](http://gamua.com/blog/2012/03/how-to-deploy-ios-apps-to-the-iphone-via-the-command-line/)) [Transporter chief](https://gist.github.com/3096433)
 
 # TODO:
 
 - Run the script as a daemon (add `-d` option)
 - Handle USR1 signal to install and start App ( respect `--no_build` option )
-- Support optional config file for options (YAML)
+- Support config file for options (YAML)
+- Add support for UIAutomation scripts for `instruments`
+
 - Add more todos :)
