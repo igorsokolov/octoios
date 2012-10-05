@@ -126,14 +126,14 @@ if path_to_app != nil
     device_id_string = options.device_id == nil ? "" : " #{options.device_id}"
     device_id_parameter = options.device_id == nil ? "" : "-i #{options.device_id}"
     log "Beaming app to device#{device_id_string}"
-    execute("#{$fruitstrap_executable} install #{device_id_parameter} -b '#{path_to_app}'", options.verbose)
+    execute("'#{$fruitstrap_executable}' install #{device_id_parameter} -b '#{path_to_app}'", options.verbose)
     if $? != 0
       fail "Unable to deploy app to device. Run verbose to get a more specific error message"
     end
   else
     # Try to uninstall if the path parameter is bundle identifier
     log "Removing app from device#{device_id_string}"
-    execute("#{$fruitstrap_executable} uninstall #{device_id_parameter} -b '#{path_to_app}'", options.verbose)
+    execute("'#{$fruitstrap_executable}' uninstall #{device_id_parameter} -b '#{path_to_app}'", options.verbose)
     fail "Unknown app type or bundle id at #{path_to_app}" if $? != 0
   end
 end
